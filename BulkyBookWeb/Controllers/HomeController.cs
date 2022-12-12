@@ -1,4 +1,5 @@
-﻿using BulkyBookWeb.Models;
+﻿
+using BulkyBook.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -26,7 +27,7 @@ namespace BulkyBookWeb.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(model: new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
