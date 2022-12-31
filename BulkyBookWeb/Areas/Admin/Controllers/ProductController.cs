@@ -12,7 +12,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers;
 public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-    private readonly IWebHostEnvironment _hostEnvironment;
+        private readonly IWebHostEnvironment _hostEnvironment;
         public ProductController(IUnitOfWork unitOfWork , IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
@@ -43,7 +43,7 @@ public class ProductController : Controller
                 }),
 
             };
-          
+        
             if (id == null || id == 0)
                 {
                     //ViewBag.CategoryList = CategoryList;
